@@ -7,15 +7,15 @@ export async function generateMetadata(): Promise<Metadata> {
   const host = requestHeaders.get("x-forwarded-host") ?? requestHeaders.get("host") ?? "localhost:3000";
   const protocol = requestHeaders.get("x-forwarded-proto") ?? (host.startsWith("localhost") ? "http" : "https");
   const base = new URL(`${protocol}://${host}`);
-  const title = "Calorie Compass — คำนวณ BMR และ TDEE";
-  const description = "คำนวณ BMR, TDEE และเป้าพลังงานรายบุคคล พร้อมคำแนะนำการกินและออกกำลังกายที่นำไปใช้ได้จริง";
+  const title = "FitFab Calorie Compass — คำนวณ BMR และ TDEE";
+  const description = "โปรแกรมจาก FitFab สำหรับคำนวณ BMR, TDEE และเป้าพลังงานรายบุคคล พร้อมคำแนะนำการกินและออกกำลังกายที่นำไปใช้ได้จริง";
   return {
     metadataBase: base,
     title,
     description,
     icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
-    openGraph: { title, description, type: "website", images: [{ url: new URL("/og.png", base), width: 1200, height: 630 }] },
-    twitter: { card: "summary_large_image", title, description, images: [new URL("/og.png", base)] },
+    openGraph: { title, description, type: "website", images: [{ url: new URL("/og-fitfab.png", base), width: 1200, height: 630 }] },
+    twitter: { card: "summary_large_image", title, description, images: [new URL("/og-fitfab.png", base)] },
   };
 }
 

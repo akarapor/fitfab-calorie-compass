@@ -89,9 +89,9 @@ export default function Home() {
   return (
     <main>
       <header className="topbar">
-        <a className="brand" href="#top" aria-label="Calorie Compass หน้าแรก">
-          <span className="brand-mark">C</span>
-          <span>CALORIE COMPASS</span>
+        <a className="brand" href="#top" aria-label="FitFab Calorie Compass หน้าแรก">
+          <img className="brand-logo" src="/fitfab-logo.jpg" alt="" />
+          <span className="brand-copy"><b>FITFAB</b><small>CALORIE COMPASS</small></span>
         </a>
         <span className="evidence-badge"><i /> Evidence-based calculator</span>
       </header>
@@ -109,12 +109,10 @@ export default function Home() {
             <span><b>03</b> คำแนะนำเฉพาะเป้าหมาย</span>
           </div>
         </div>
-        <div className="hero-stat" aria-hidden="true">
-          <span>YOUR</span>
-          <strong>ENERGY</strong>
-          <div className="orbit"><i /><i /><i /></div>
-          <small>BASELINE → ACTION</small>
-        </div>
+        <figure className="hero-logo-card">
+          <img src="/fitfab-logo.jpg" alt="FitFab — Start today, Live better" />
+          <figcaption><span>POWERED BY</span><strong>FITFAB</strong></figcaption>
+        </figure>
       </section>
 
       <section className="calculator-shell" aria-label="เครื่องคำนวณ BMR และ TDEE">
@@ -218,7 +216,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <p>CALORIE COMPASS <span>© 2026</span></p>
+        <div className="footer-brand"><img src="/fitfab-logo.jpg" alt="FitFab" /><p>FITFAB × CALORIE COMPASS <span>© 2026</span></p></div>
         <small>ค่าที่ได้เป็นการประมาณสำหรับบุคคลทั่วไป ไม่ใช้วินิจฉัยหรือรักษาโรค ผู้ตั้งครรภ์ ให้นมบุตร อายุต่ำกว่า 18 ปี มีโรคประจำตัว หรือมีประวัติ Eating Disorder ควรปรึกษาแพทย์หรือนักกำหนดอาหารก่อนปรับพลังงาน</small>
       </footer>
     </main>

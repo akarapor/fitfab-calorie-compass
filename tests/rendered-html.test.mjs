@@ -13,12 +13,15 @@ test("ships the complete Thai BMR/TDEE calculator", async () => {
   ]);
 
   assert.match(layout, /lang="th"/);
-  assert.match(layout, /og\.png/);
+  assert.match(layout, /og-fitfab\.png/);
+  assert.match(layout, /FitFab Calorie Compass/);
+  assert.match(page, /fitfab-logo\.jpg/);
   assert.match(page, /Mifflin/);
   assert.match(page, /คำนวณค่าของฉัน/);
   assert.match(page, /Strength Training 2–4 วัน/);
   assert.match(page, /consent/);
   assert.match(css, /@media \(max-width: 600px\)/);
+  assert.match(css, /--orange: #f58a00/);
   assert.match(schema, /sqliteTable\("leads"/);
   assert.match(route, /sex === "male" \? 5 : -161/);
   assert.match(route, /goal === "lose" \? \.85/);
